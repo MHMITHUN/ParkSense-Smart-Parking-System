@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 240" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070b14"/>
+      <stop offset="50%" stop-color="#0b1329"/>
+      <stop offset="100%" stop-color="#060913"/>
+    </linearGradient>
+    
+    <!-- Accent Gradient -->
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+
+    <!-- Glass Box Gradient -->
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+    
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0.4"/>
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    
+    <filter id="subtleGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <style>
+    .brand-title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', sans-serif; font-weight: 800; font-size: 52px; fill: #ffffff; letter-spacing: -1px; }
+    .brand-title-accent { fill: url(#primaryGrad); }
+    .brand-subtitle { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', sans-serif; font-weight: 500; font-size: 15px; fill: #94a3b8; letter-spacing: 2.5px; text-transform: uppercase; }
+    .badge-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', sans-serif; font-weight: 600; font-size: 12px; fill: #38bdf8; }
+    .meta-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', sans-serif; font-weight: 400; font-size: 13px; fill: #64748b; }
+    .pulse-dot { animation: pulse 2s infinite; }
+  </style>
+
+  <!-- Canvas Card -->
+  <rect x="2" y="2" width="796" height="236" rx="20" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="1.5"/>
+
+  <!-- Background Decorative Grid Lines -->
+  <g opacity="0.07" stroke="#38bdf8" stroke-width="1">
+    <line x1="120" y1="0" x2="120" y2="240"/>
+    <line x1="240" y1="0" x2="240" y2="240"/>
+    <line x1="360" y1="0" x2="360" y2="240"/>
+    <line x1="480" y1="0" x2="480" y2="240"/>
+    <line x1="600" y1="0" x2="600" y2="240"/>
+    <line x1="720" y1="0" x2="720" y2="240"/>
+    <line x1="0" y1="60" x2="800" y2="60"/>
+    <line x1="0" y1="120" x2="800" y2="120"/>
+    <line x1="0" y1="180" x2="800" y2="180"/>
+  </g>
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="140" cy="120" r="70" fill="#38bdf8" opacity="0.12" filter="url(#glow)"/>
+  <circle cx="680" cy="80" r="90" fill="#818cf8" opacity="0.08" filter="url(#glow)"/>
+
+  <!-- ================= LOGO ICON GROUP ================= -->
+  <g transform="translate(60, 50)">
+    <!-- Icon Backdrop Glass Container -->
+    <rect width="140" height="140" rx="32" fill="url(#glassGrad)" stroke="url(#borderGrad)" stroke-width="2"/>
+    
+    <!-- Neon Radar Rings -->
+    <circle cx="70" cy="70" r="54" stroke="url(#primaryGrad)" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.4"/>
+    <circle cx="70" cy="70" r="44" stroke="#38bdf8" stroke-width="1" opacity="0.2"/>
+
+    <!-- Dynamic Smart Parking Bay Lines -->
+    <path d="M 32 46 L 46 46 L 46 94 L 32 94" stroke="#64748b" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+    <path d="M 108 46 L 94 46 L 94 94 L 108 94" stroke="#64748b" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+
+    <!-- Iconic "P" Modern Monogram -->
+    <path d="M 52 102 L 52 38 L 74 38 C 86.15 38 96 47.85 96 60 C 96 72.15 86.15 82 74 82 L 52 82" 
+          stroke="url(#primaryGrad)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none" filter="url(#subtleGlow)"/>
+
+    <!-- Sensor / AI Detection Dot -->
+    <circle cx="74" cy="60" r="4.5" fill="#38bdf8" filter="url(#subtleGlow)"/>
+    <circle cx="94" cy="98" r="4" fill="#10b981" filter="url(#subtleGlow)"/>
+    <circle cx="94" cy="98" r="8" stroke="#10b981" stroke-width="1" opacity="0.4"/>
+  </g>
+
+  <!-- ================= BRAND TYPOGRAPHY ================= -->
+  <!-- Top Category Tag -->
+  <g transform="translate(230, 64)">
+    <rect width="186" height="24" rx="12" fill="#38bdf8" fill-opacity="0.1" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1"/>
+    <circle cx="12" cy="12" r="3.5" fill="#10b981"/>
+    <text x="24" y="16" class="badge-text">ENTERPRISE SMART IOT</text>
+  </g>
+
+  <!-- Main Headline -->
+  <text x="230" y="128" class="brand-title">
+    Park<tspan class="brand-title-accent">Sense</tspan>
+  </text>
+
+  <!-- Subtitle -->
+  <text x="230" y="156" class="brand-subtitle">
+    Autonomous Smart Parking Management Engine
+  </text>
+
+  <!-- Meta details / Pattern Architecture Badge -->
+  <g transform="translate(230, 174)">
+    <text x="0" y="14" class="meta-text">
+      ⚡ <tspan fill="#e2e8f0" font-weight="600">16 GoF Design Patterns</tspan> · ANPR Simulation · Live Bay Telemetry · Spring Boot 3.4
+    </text>
+  </g>
+
+</svg>
